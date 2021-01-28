@@ -1046,6 +1046,7 @@ export class PostsManager extends EntityManagerBase<CSPost> {
 					providerId: parsedUri.context.pullRequest.providerId,
 					params: {
 						pullRequestId: parsedUri.context.pullRequest.id,
+						leftSha: parsedUri.leftSha,
 						sha: parsedUri.rightSha,
 						text: request.attributes.text || "",
 						path: parsedUri.path,
@@ -1885,7 +1886,7 @@ export class PostsManager extends EntityManagerBase<CSPost> {
 					anchorFormat: "[${text}](${url})"
 				};
 		}
-	}
+	};
 
 	createProviderCard = async (
 		providerCardRequest: {
@@ -2158,7 +2159,7 @@ export class PostsManager extends EntityManagerBase<CSPost> {
 			Logger.error(error, `failed to create a ${attributes.issueProvider.name} card:`);
 			return undefined;
 		}
-	}
+	};
 }
 
 async function resolveCreatePostResponse(response: CreatePostResponse) {
