@@ -45,7 +45,7 @@
 			]
 		},
 		"views": {
-			"codestream-activitybar": [
+			"github-enterprise-activitybar": [
 				{
 					"id": "activitybar.github-enterprise",
 					"type": "webview",
@@ -64,12 +64,12 @@
 		"viewsWelcome": [
 			{
 				"view": "scmTreeDataProvider",
-				"contents": "[Toggle CodeStream](command:codestream.toggle)",
+				"contents": "[Toggle CodeStream](command:github-enterprise.toggle)",
 				"when": "codestream:status == signedOut"
 			},
 			{
 				"view": "scmTreeDataProvider",
-				"contents": "[Request Feedback](command:codestream.newReview)",
+				"contents": "[Request Feedback](command:github-enterprise.newReview)",
 				"when": "codestream:status == signedIn"
 			},
 			{
